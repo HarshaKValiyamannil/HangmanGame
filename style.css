@@ -1,0 +1,75 @@
+/* Basic styling for the game container */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Styling for the hangman figure */
+.hangman {
+    width: 200px;
+    height: 200px;
+    background: #333;
+    position: relative;
+}
+
+/* Styling for the letter buttons */
+.letters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.letters button {
+    font-size: 16px;
+    padding: 5px, 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Styling for incorrect guesses */
+.hangman.stage-0 {
+    border-top: 2px solid #333;
+}
+
+.hangman.stage-1 {
+    border-left: 2px solid #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    left: 80px;    
+}
+
+.hangman.stage-2 {
+    position: absolute;
+    width: 4px;
+    height: 100px;
+    top: 50px;
+    left: 100px;
+}
+
+.hangman.stage-4 {
+    transform: rotate(-45deg);
+    top: 60px;
+    left: 100px;
+}
+
+.hangman.stage-5 {
+    transform: rotate(-45deg);
+    top: 85px;
+    left: 100px;
+}
+
+.hangman.stage-6 {
+    transform: rotate(-45deg);
+    top: 85px;
+    left: 100px;
+}
