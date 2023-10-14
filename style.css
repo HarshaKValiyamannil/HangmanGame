@@ -24,6 +24,7 @@ body {
 }
 
 #options-container {
+    margin-top: 10em;
     text-align: center;
 }
 
@@ -43,6 +44,7 @@ body {
     border-radius: 0.3em;
     text-transform: capitalize;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 #options-container button:disabled {
@@ -62,15 +64,22 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.6em;
+    gap: 1em;
 }
 
 #letter-container button {
     height: 2.4em;
+    /* margin-top: 0.5em; */
+    /* margin-left: 0.22em; */
     width: 2.4em;
     border-radius: 0.3em;
-    background-color: #ffffff;
+    background-color: #6a3b95;
+    color: #FFF;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
 }
 
 .new-game-popup {
@@ -94,15 +103,8 @@ body {
     margin: 0.6em 0 1.2em 0;
 }
 
-/* canvas {
-    display: block;
-    margin: auto;
-    border: 10px solid #8c52ff;
-    border-radius: 10px;     
-} */
-
 #hangman-image {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -137,6 +139,7 @@ body {
     color: #fff;
     border-radius: 0.2em;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 .win-msg {
     color: #39d78d;

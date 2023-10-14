@@ -1,0 +1,6 @@
+{ "options":{
+    "fruits": ["Mango", "Pineapple", "Jackfruit", "Watermelon", "Guava", "Blueberrry", "Raspberry", "Apple", "Grapes", "Grapefruit", "Banana", "Gooseberry", "Strawberry"],
+    "animals": ["Lion", "Tiger", "Dog", "Panther", "Elephant"],
+    "countries": ["United Kingdom", "India", "Ireland", "France", "Japan"]
+    }
+}
