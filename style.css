@@ -10,11 +10,10 @@ body {
 }
 
 /* Styling for the hangman figure */
-.hangman {
-    width: 200px;
-    height: 200px;
+.hangman img {
+    height: 400px;
     background: #333;
-    position: relative;
+    position: center;
 }
 
 /* Styling for the letter buttons */
@@ -34,8 +33,16 @@ body {
     cursor: pointer;
 }
 
+/* Set the style of each dashed line */
+.dashed-Line {
+    width: 10px;
+    height: 1px;
+    background-color: black;
+    margin: 0 5px;
+}
+
 /* Styling for incorrect guesses */
-.hangman.stage-0 {
+/* .hangman.stage-0 {
     border-top: 2px solid #333;
 }
 
@@ -72,4 +79,4 @@ body {
     transform: rotate(-45deg);
     top: 85px;
     left: 100px;
-}
+} */

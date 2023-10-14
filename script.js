@@ -7,6 +7,7 @@ const selectedWord = words[Math.floor(Math.random() * words.length)];
 // Initialise game variables
 let remainingAttempts = 0;
 const guessedLetters = [];
+let numOfLetters = 0;
 
 // Function to update the word placeholders
 function updateWord() {
@@ -59,6 +60,18 @@ for (let letter of "abcdefghijklmnopqrstuvwxyz") {
     button.textContent = letter;
     button.addEventListener("click", () => handleGuess(letter));
     document.querySelector(".letters").appendChild(button);
+}
+
+// Update the style of each dashed line to be visible when the user guesses
+// a letter correctly
+function updateDashedLine(letter) {
+    const dashedLine = document.querySelectorAll('.dashed-line');
+
+    for (const dashedLine of dashedLines) {
+        if (dashedLine.textContent === letter) {
+            dashedLine.style.display = 'block';
+        }
+    }
 }
 
 // Initialise the game
