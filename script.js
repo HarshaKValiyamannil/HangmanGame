@@ -123,7 +123,9 @@ function handleLetterClick(clickedLetter) {
     }
 
     letterContainer.querySelectorAll("button").forEach((button) => {
-        button.disabled = true;
+        if (button.innerText === clickedLetter) {
+            button.disabled = true;
+        }
     });
 }
 
