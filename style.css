@@ -73,13 +73,19 @@ body {
     /* margin-left: 0.22em; */
     width: 2.4em;
     border-radius: 0.3em;
-    background-color: #6a3b95;
+    background-color: #8c52ff;
     color: #FFF;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     justify-content: center;
     align-items: center;
     font-size: 1.2em;
+}
+
+#letter-container button:disabled {
+    border: 3px solid #808080;
+    color: #808080;
+    background-color: #efefef;
 }
 
 .new-game-popup {
