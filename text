@@ -1,0 +1,5 @@
+// let buttonCon = document.createElement("div");
+    // for (let value in options) {
+    //     buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')">${value}</button>`;
+    // }
+    // optionsContainer.appendChild(buttonCon);

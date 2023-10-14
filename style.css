@@ -1,82 +1,146 @@
-/* Basic styling for the game container */
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+* {
+    padding: 0;
     margin: 0;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Styling for the hangman figure */
-.hangman img {
-    height: 400px;
-    background: #333;
-    position: center;
+body {
+    background-color: rgba(40, 179, 142, 0.2);
 }
 
-/* Styling for the letter buttons */
-.letters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.letters button {
+.container {
     font-size: 16px;
-    padding: 5px, 10px;
-    background: #333;
-    color: #fff;
-    border: none;
+    background-color: #ffffff;
+    width: 90vw;
+    max-width: 34em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 3em;
+    border-radius: 0.6em;
+    box-shadow: 0 1.2em 2.4em rgba(111, 85, 0, 0.25);
+}
+
+#options-container {
+    text-align: center;
+}
+
+#options-container div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.2em 0 2,4em 0;
+}
+
+#options-container button{
+    padding: 0.6em 1.2em;
+    margin: 2em;
+    border: 3px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 0.3em;
+    text-transform: capitalize;
     cursor: pointer;
 }
 
-/* Set the style of each dashed line */
-.dashed-Line {
-    width: 10px;
-    height: 1px;
-    background-color: black;
-    margin: 0 5px;
+#options-container button:disabled {
+    border: 3px solid #808080;
+    color: #808080;
+    background-color: #efefef;
 }
 
-/* Styling for incorrect guesses */
-/* .hangman.stage-0 {
-    border-top: 2px solid #333;
+#options-container button.active {
+    background-color: #8c52ff;
+    border: 3px solid #000000;
+    color: #fff;
 }
 
-.hangman.stage-1 {
-    border-left: 2px solid #333;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    top: 10px;
-    left: 80px;    
+.letter-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6em;
 }
 
-.hangman.stage-2 {
+#letter-container button {
+    height: 2.4em;
+    width: 2.4em;
+    border-radius: 0.3em;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.new-game-popup {
+    background-color: #ffffff;
     position: absolute;
-    width: 4px;
-    height: 100px;
-    top: 50px;
-    left: 100px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.6em;
 }
 
-.hangman.stage-4 {
-    transform: rotate(-45deg);
-    top: 60px;
-    left: 100px;
+#user-input-section {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8em;
+    margin: 0.6em 0 1.2em 0;
 }
 
-.hangman.stage-5 {
-    transform: rotate(-45deg);
-    top: 85px;
-    left: 100px;
-}
-
-.hangman.stage-6 {
-    transform: rotate(-45deg);
-    top: 85px;
-    left: 100px;
+/* canvas {
+    display: block;
+    margin: auto;
+    border: 10px solid #8c52ff;
+    border-radius: 10px;     
 } */
+
+#hangman-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hide {
+    display: none;
+}
+
+#result h2 {
+    font-size:1.8em;
+    text-align: center;
+}
+
+#result p {
+    font-size: 1.25em;
+    margin: 1em 0 2em 0;
+}
+
+#result span {
+    font-weight: 600;
+}
+
+#new-game-button {
+    font-size: 1.25em;
+    padding: 0.5em 1em;
+    background-color: #8c52ff;
+    border: 3px solid #000000;
+    color: #fff;
+    border-radius: 0.2em;
+    cursor: pointer;
+}
+.win-msg {
+    color: #39d78d;
+}
+.lose-msg {
+    color: #fe5152;
+}
